@@ -1,0 +1,135 @@
+body {
+  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.viewer {
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 200px;
+  height: 300px;
+  background-color: #fafafa;
+  border-radius: 2px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.viewer-img {
+  margin-left: 50px;
+  margin-right: 50px;
+  object-fit: cover;
+  object-position: center;
+  width: 700px;
+  height: 100%;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+
+.right-arrow {
+  position: absolute;
+  top: 130px;
+  right: 16px;
+  transform: rotate(0.5turn);
+}
+
+.label-box {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 700px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 0px;
+}
+
+p {
+  font-size: smaller;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+
+  width: 800px;
+  height: 100px;
+}
+
+.thumbnail-element {
+  width: 75px;
+  height: 75px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  background-image: linear-gradient(to bottom, #fff, #ccc);
+}
+
+.active-thumbnail {
+  transform: translateY(-5px);
+}
+
+.active-thumbnail::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+}
+
+.thumbnail-element:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.thumbnail-label {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 10px;
+  box-sizing: border-box;
+  background-color: black;
+  color: #fff;
+  font-size: smaller;
+  text-align: center;
+  box-shadow: 0 0 3px 3px rgb(48, 47, 47);
+  white-space: nowrap;
+}
+
+.thumbnail-element:hover .thumbnail-label {
+  display: block;
+}
